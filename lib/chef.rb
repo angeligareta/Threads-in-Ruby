@@ -23,11 +23,7 @@ class Chef
     @dish_counter -= 1 unless @dish_counter == 0
    
     if @years_worked < RETIREMENT_YEAR
-      if @dish_counter == 0
-        return 0
-      else
-        return 1
-      end
+      return @dish_counter == 0 ? 0 : 1
     else
       return -1
     end

@@ -6,8 +6,8 @@ TIMES_TO_TEST = 10
 
 @chef = Chef.new()
 
-chef_thread = Thread.new do 
-    TIMES_TO_TEST.times { 
+chef_thread = Thread.new do
+    TIMES_TO_TEST.times {
         semaphore.synchronize {
             @chef.add_year 
         }
